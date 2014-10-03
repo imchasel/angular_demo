@@ -1,0 +1,30 @@
+<!DOCTYPE html5>
+<html ng-app="app">
+<head>
+	<title>Demo app</title>
+
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+	
+	<script src="bower_components/jquery/dist/jquery.js " type="text/javascript"></script>
+
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
+
+	<script src="bower_components/angular/angular.js", type="text/javascript"></script>
+	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js" type="text/javascript"></script>
+	<script src="bower_components/angular-ui-bootstrap/src/modal/modal.js", type="text/javascript"></script>
+	
+	<script src="app.js", type="text/javascript"></script>
+</head>
+<body ng-controller="myCtrl as ct">
+
+	<h1>Greetings</h1>
+	<button id="open" ng-click="open()">open</button>
+	{{data}}
+
+	<script type="text/ng-template" id="template.html">
+		<h2>I'M A MODAL!! {{"its"+mi}}</h2>
+		<button ng-click="close()">close</button>
+		<button ng-click="$close()">$close</button>
+	</script>
+</body>
+</html>
